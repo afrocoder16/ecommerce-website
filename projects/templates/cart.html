@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}Cart - SouthWest Store{% endblock title %}
+
+
+
+{% block hero %}
+    <!-- Intentionally left blank to not display the hero section on the cart page -->
+{% endblock %}
+
+{% block content %}
+<div class="cart-container">
+    <h2>Your Shopping Cart</h2>
+    {% if cart %}
+        <div class="cart-items">
+            {% for item in cart %}
+                <div class="cart-item">
+                    <div class="item-details">
+                        <span class="item-name">{{ item.product.name }}</span>
+                        <span class="item-quantity">{{ item.quantity }} x</span>
+                        <span class="item-price">${{ item.price }}</span>
+                    </div>
+                    <div class="item-actions">
+                        <a href="{% url 'cart_remove' item.product.id %}" class="remove-btn">Remove</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert {{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+        <div class="cart-total">
+            <span>Total:</span>
+            <span class="total-price">${{ cart.get_total_price }}</span>
+        </div>
+    {% else %}
+        <div class="cart-empty">
+            <p>Your cart is empty.</p>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

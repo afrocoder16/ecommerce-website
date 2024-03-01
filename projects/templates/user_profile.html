@@ -1,0 +1,9 @@
+{% if user.is_authenticated %}
+    <h2>User Profile</h2>
+    <p><strong>Username:</strong> {{ user.username }}</p> 
+    <!-- will add more features in the feature  -->
+{% else %}
+    <p>You are not logged in. <a href="{% url 'login' %}">Login here</a></p>
+{% endif %}
+
+

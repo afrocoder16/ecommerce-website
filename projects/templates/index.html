@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - SouthWest Store{% endblock title %}
+
+{% block content %}
+    <!-- List of Products -->
+    <section>
+        <h2>Our Products </h2>
+        <div class="product-listing">
+            {% for product in products %}
+                <div class="product">
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                    <h3>{{ product.name }}</h3>
+                    <p>{{ product.description }}</p>
+                    <p>Price: ${{ product.price }}</p>
+                    <button onclick="location.href='{% url 'cart_add' product.id %}'">Add to Cart</button>
+   
+                </div>
+            {% empty %}
+                <p>No products found.</p>
+            {% endfor %}
+        </div>
+    </section>
+   
+{% endblock %}

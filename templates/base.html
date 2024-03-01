@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}SouthWest Store{% endblock title %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block extra_head %}{% endblock extra_head %}
+</head>
+<body>
+    <header>
+        <img src="{% static 'images/southwest.png' %}" alt="SouthWest Store Logo" id="logo">
+        <h1>Welcome to SouthWest Store</h1>
+        <nav>
+            <!-- Add more navigation links as needed -->
+            <a href="{% url 'home' %}">Home  </a>
+            {% if user.is_authenticated %}
+            <a href="{% url 'user_profile' %}">Account  </a>
+            <a href="{% url 'logout' %}">Sign out  </a>
+        {% else %}
+            <a href="{% url 'login' %}">Sign in </a>
+        {% endif %}
+            <a href="{% url 'cart_detail' %}">Cart  </a>
+
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+{% block hero %}
+<div class="hero">
+    <img src="{% static 'images/pic.jpg' %}" alt="Featured Promotion" class="hero-image">
+    <div class="hero-content">
+        <h2>The southwest Store</h2>
+        <p>The best products for our best customers</p>
+    </div>
+</div>
+{% endblock %}
+
+
+    {% block content %} 
+
+    {% endblock content %}
+
+    <footer>
+        <p>© 2023 SouthWest Store</p>
+    </footer>
+
+</body>
+</html>
