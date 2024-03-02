@@ -4,6 +4,8 @@ from .models import UserProfile
 from .cart import Cart
 from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
+
 
 # This view will render your homepage (index.html)
 def home(request):

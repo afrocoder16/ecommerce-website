@@ -33,12 +33,14 @@ class Cart(object):
         self.session.modified = True
 
     def remove(self, product):
-        """
-        Remove a product from the cart.
-        """
         product_id = str(product.id)
         if product_id in self.cart:
-            del self.cart[product_id]
+            if self.cart[product_id]['quantity'] > 1:
+                # Decrease the quantity by one
+                self.cart[product_id]['quantity'] -= 1
+            else:
+                # Remove the item if the quantity reaches 0
+                del self.cart[product_id]
             self.save()
 
     def __iter__(self):
