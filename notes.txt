@@ -1,7 +1,0 @@
-Admin user name - samson
-password - Afrocoder12345
-
-directory of vertual env - s\projects\comm\southwest 
-
-comm\scripts\activate = to activate virtual env
-python manage.py runserver = to start running the server (http://127.0.0.1:8000/)
