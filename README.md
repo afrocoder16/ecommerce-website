@@ -24,9 +24,9 @@ Welcome to the SouthWest Store, an e-commerce platform built with Django.
     cd southwest-store
     ```
 
-3. Create a virtual environment:
+3. you can create a virtual environment:
     ```sh
-    python -m venv venv
+    python -m venv venv(name of your virtual environment)
     source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
     ```
 
