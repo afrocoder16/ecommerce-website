@@ -136,23 +136,23 @@ section {
 }
 
 .product h3 {
-    font-size: 1.5rem; /* Example size, adjust as needed */
-    white-space: nowrap; /* Keeps the text on a single line */
-    overflow: hidden; /* Hides text that goes beyond the container */
-    text-overflow: ellipsis; /* Adds an ellipsis to indicate text overflow */
-    max-width: 100%; /* Ensures the title does not exceed the container width */
+    font-size: 1.5rem; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    max-width: 100%; 
     margin: 0.5rem;
-    display: block; /* Ensures the element respects the width */
+    display: block; 
 }
 .product p {
     color: #666;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* Number of lines to show */
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    height: 4.5em; /* Adjust the height depending on line-height and font-size */
-    line-height: 1.5em; /* Adjust line-height as needed */
+    height: 4.5em; 
+    line-height: 1.5em; 
     margin: 0.5rem;
 }
 
