@@ -1,12 +1,13 @@
-# Virtual environment directories
+
 /Lib/
 /Scripts/
 
-# VSCode settings
+
 .vscode/
 
-# Python specific
 *.pyc
 __pycache__/
 *.pyo
 *.pyd
+.venv/
+env/
