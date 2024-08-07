@@ -1,13 +1,9 @@
-# created by virtualenv automatically
 # Virtual environment directories
 /Lib/
 /Scripts/
-/bin/
-/Include/
-/lib/
-/lib64/
-/local/
-/share/
+
+# VSCode settings
+.vscode/
 
 # Python specific
 *.pyc
