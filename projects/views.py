@@ -5,6 +5,7 @@ from .cart import Cart
 from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+from django.http import JsonResponse
 
 
 # This view will render your homepage (index.html)
@@ -59,7 +60,8 @@ def cart_detail(request):
     cart = Cart(request)
     return render(request, 'cart.html', {'cart': cart})
 
-
+def test_api(request):
+    return JsonResponse({'status': 'API is working!'})
 
 
 

@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
 
+
 urlpatterns = [
     path('', views.home, name='home'),  # This will make your homepage accessible from the root URL
     path('products/', views.product_listing, name='product_listing'),
@@ -10,4 +11,5 @@ urlpatterns = [
     path('cart/', views.cart_detail, name='cart_detail'),
     path('login/', views.user_login, name='login'),  # Use views.user_login here
     path('logout/', views.user_logout, name='logout'),
+    path('api/test/', views.test_api, name='test_api'),
 ]
