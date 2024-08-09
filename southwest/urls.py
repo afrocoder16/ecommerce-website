@@ -7,6 +7,8 @@ urlpatterns = [  # This is the URL routing system for the entire app
     path('admin/', admin.site.urls),  # admin page
     path('', include('projects.urls')),  # getting all the pages from projects
     path('accounts/', include('django.contrib.auth.urls')),  # This includes default auth URLs
+    path('test-api/', test_api, name='test_api'),
+
 ]
 
 if settings.DEBUG:
