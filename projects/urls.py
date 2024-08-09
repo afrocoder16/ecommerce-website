@@ -1,5 +1,7 @@
 from django.urls import path
 from . import views
+from .import test_api
+
 
 urlpatterns = [
     path('', views.home, name='home'),  # make your homepage accessible from the root URL
