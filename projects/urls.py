@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .import test_api
+
 
 
 urlpatterns = [
@@ -12,6 +12,5 @@ urlpatterns = [
     path('cart/', views.cart_detail, name='cart_detail'),
     path('login/', views.user_login, name='login'),
     path('logout/', views.user_logout, name='logout'),
-    path('test-api/', views.test_api_response, name='test_api_response'),
 
 ]

@@ -3,10 +3,10 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.http import JsonResponse
 from rest_framework.response import Response
-from rest_framework.decorators import api_view
 from django.contrib.auth.decorators import login_required
 from .models import Product, UserProfile
 from .cart import Cart
+
 
 # Render your homepage (index.html)
 def home(request):
@@ -62,10 +62,3 @@ def cart_detail(request):
     cart = Cart(request)
     return render(request, 'cart.html', {'cart': cart})
 
-# Simple API endpoint returning JSON response
-def test_api_json(request):
-    return JsonResponse({'status': 'API is working!'})
-
-@api_view(['GET'])
-def test_api_response(request):
-    return Response({"message": "API is working!"})
